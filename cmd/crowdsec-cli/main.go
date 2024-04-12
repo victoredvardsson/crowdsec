@@ -3,7 +3,7 @@ package main
 import (
 	"os"
 	"slices"
-	"time"
+//	"time"
 
 	"github.com/fatih/color"
 	cc "github.com/ivanpirog/coloredcobra"
