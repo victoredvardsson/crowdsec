@@ -334,7 +334,7 @@ var crowdsecT0 time.Time
 func main() {
 	// The initial log level is INFO, even if the user provided an -error or -warning flag
 	// because we need feature flags before parsing cli flags
-	log.SetFormatter(&log.TextFormatter{TimestampFormat: time.RFC3339, FullTimestamp: true})
+	log.SetFormatter(&log.JSONFormatter{TimestampFormat: time.RFC3339, FullTimestamp: true})
 
 	if err := fflag.RegisterAllFeatures(); err != nil {
 		log.Fatalf("failed to register features: %s", err)

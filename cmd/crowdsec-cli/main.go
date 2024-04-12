@@ -165,7 +165,7 @@ func (cli *cliRoot) colorize(cmd *cobra.Command) {
 
 func (cli *cliRoot) NewCommand() *cobra.Command {
 	// set the formatter asap and worry about level later
-	logFormatter := &log.TextFormatter{TimestampFormat: time.RFC3339, FullTimestamp: true}
+	logFormatter := &log.JSONFormatter{TimestampFormat: time.RFC3339, FullTimestamp: true}
 	log.SetFormatter(logFormatter)
 
 	if err := fflag.RegisterAllFeatures(); err != nil {
