@@ -47,7 +47,7 @@ func SetDefaultLoggerConfig(cfgMode string, cfgFolder string, cfgLevel log.Level
 	}
 	logLevel = cfgLevel
 	log.SetLevel(logLevel)
-	logFormatter = &log.TextFormatter{TimestampFormat: time.RFC3339, FullTimestamp: true, ForceColors: forceColors}
+	logFormatter = &log.JSONFormatter{}
 	log.SetFormatter(logFormatter)
 	return nil
 }
